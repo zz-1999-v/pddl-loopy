@@ -7,4 +7,4 @@
 * 将同目录下utlis中的`models`文件与`utlis.py`文件进行替换
 
 ### 执行代码
-`python -m examples.pybullet.loopy2.run -teleport`
+`python -m examples.pybullet.loopy.run -teleport`
