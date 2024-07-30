@@ -18,6 +18,9 @@ USE_RELATION = True
 Priority = namedtuple('Priority', ['complexity', 'num']) # num ensures FIFO
 
 def is_instance(atom, schema):
+    # print("***********************is_instance******************************")
+    # print("atom.args:", atom.args)
+    # print("schema.args", schema.args)
     return (atom.function == schema.function) and \
             all(is_parameter(b) or (a == b)
                 for a, b in safe_zip(atom.args, schema.args))

@@ -174,6 +174,10 @@ def solve_abstract(problem, constraints=PlanConstraints(), stream_info={}, repla
             disabled_axioms = create_disabled_axioms(skeleton_queue) if has_optimizers else []
             if disabled_axioms:
                 domain.axioms.extend(disabled_axioms)
+            # print("*************************algorithm***************************************")
+            # print("evaluations", evaluations, type(evaluations))
+            # print("positive_externals", positive_externals, type(positive_externals))
+            # print("optimistic_solve_fn", optimistic_solve_fn, type(optimistic_solve_fn))
             stream_plan, opt_plan, cost = iterative_plan_streams(evaluations, positive_externals,
                 optimistic_solve_fn, complexity_limit, max_effort=max_effort)
             for axiom in disabled_axioms:

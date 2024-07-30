@@ -1,0 +1,16 @@
+AttrDict({'world_joint': 
+jointInfo(id=0, name='world_joint', type='FIXED', lowerLimit=0.0, upperLimit=-1.0, maxForce=0.0, maxVelocity=0.0), 'base_joint': 
+jointInfo(id=1, name='base_joint', type='REVOLUTE', lowerLimit=-100.0, upperLimit=100.0, maxForce=150.0, maxVelocity=3.15), 'shoulder_joint': 
+jointInfo(id=2, name='shoulder_joint', type='REVOLUTE', lowerLimit=-100.0, upperLimit=100.0, maxForce=150.0, maxVelocity=3.15), 'elbow_joint': 
+jointInfo(id=3, name='elbow_joint', type='REVOLUTE', lowerLimit=-100.0, upperLimit=100.0, maxForce=150.0, maxVelocity=3.15), 'wrist_1_joint': 
+jointInfo(id=4, name='wrist_1_joint', type='REVOLUTE', lowerLimit=-100.0, upperLimit=100.0, maxForce=28.0, maxVelocity=3.2), 'wrist_2_joint': 
+jointInfo(id=5, name='wrist_2_joint', type='REVOLUTE', lowerLimit=-100.0, upperLimit=100.0, maxForce=28.0, maxVelocity=3.2), 'wrist_3_joint': 
+jointInfo(id=6, name='wrist_3_joint', type='REVOLUTE', lowerLimit=-100.0, upperLimit=100.0, maxForce=28.0, maxVelocity=3.2), 'ee_joint': 
+jointInfo(id=7, name='ee_joint', type='FIXED', lowerLimit=0.0, upperLimit=-1.0, maxForce=0.0, maxVelocity=0.0)})
+
+
+Movable: [5, 6, 7, 9]
+Fixed: [1, 2, 3, 4, 8]
+['simple_cuboid', 'simple_cuboid', 'simple_cuboid', 'simple_cuboid']
+['plane', 'table.urdf', 'cup', 'stove', 'object']
+

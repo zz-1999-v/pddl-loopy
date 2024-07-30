@@ -86,6 +86,8 @@ class SolutionStore(object):
 ##################################################
 
 def add_fact(evaluations, fact, result=INIT_EVALUATION, complexity=0):
+    # print("*****************fact*************************")
+    # print("fact", fact, type(fact))
     evaluation = evaluation_from_fact(fact)
     if (evaluation not in evaluations) or (complexity < evaluations[evaluation].complexity):
         evaluations[evaluation] = EvaluationNode(complexity, result)

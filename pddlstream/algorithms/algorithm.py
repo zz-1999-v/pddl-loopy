@@ -78,6 +78,7 @@ def parse_problem(problem, stream_info={}, constraints=None, unit_costs=False, u
     domain_pddl, constant_map, stream_pddl, stream_map, init, goal = problem
 
     domain = parse_domain(domain_pddl) # TODO: normalize here
+ 
     #domain = domain_pddl
     if len(domain.types) != 1:
         raise NotImplementedError('Types are not currently supported')

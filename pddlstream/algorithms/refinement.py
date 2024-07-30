@@ -56,6 +56,9 @@ def optimistic_process_streams(evaluations, streams, complexity_limit=INF, **eff
     instantiator = Instantiator(optimistic_streams)
     for evaluation, node in evaluations.items():
         if node.complexity <= complexity_limit:
+            # print("*****************optimistic_process_streams************************")
+            # print("evaluation", evaluation, type(evaluation))
+            # print("node_complextiy", node.complexity, type(node))
             instantiator.add_atom(evaluation, node.complexity)
     results = []
     while instantiator and (instantiator.min_complexity() <= complexity_limit):
