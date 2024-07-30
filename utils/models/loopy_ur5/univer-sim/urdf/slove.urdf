@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<robot name="shovel">
+
+  <!-- Link representing the base of the shovel -->
+  <link name="slove_base_link">
+    <visual>
+      <geometry>
+        <box size="0.0 0.00 0.0"/>
+      </geometry>
+      <material name="grey">
+        <color rgba="0.7 0.7 0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.0 0.0 0.0"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.5"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <inertia ixx="0.0002" ixy="0.0" ixz="0.0" iyy="0.0002" iyz="0.0" izz="0.0004"/>
+    </inertial>
+  </link>
+
+  <!-- Link representing the blade of the shovel -->
+  <link name="blade_link">
+    <visual>
+      <geometry>
+        <box size="0.06 0.002 0.08"/>
+      </geometry>
+      <material name="silver">
+        <color rgba="0.8 0.8 0.8 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.06 0.002 0.08"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.2"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 -0.025"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0002"/>
+    </inertial>
+  </link>  <!-- Link representing the blade of the shovel -->
+
+  <link name="blade_link_side1">
+    <visual>
+      <geometry>
+        <mesh filename="package://pybullet/meshes/slove/sloves_side.stl"/>
+      </geometry>
+      <material name="silver">
+        <color rgba="0.8 0.8 0.8 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://pybullet/meshes/slove/sloves_side.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.2"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 -0.025"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0002"/>
+    </inertial>
+  </link>
+
+  <link name="blade_link_side2">
+    <visual>
+      <geometry>
+        <mesh filename="package://pybullet/meshes/slove/sloves_side.stl"/>
+      </geometry>
+      <material name="silver">
+        <color rgba="0.8 0.8 0.8 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://pybullet/meshes/slove/sloves_side.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.2"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 -0.025"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0002"/>
+    </inertial>
+  </link>
+
+    <link name="blade_link_bot">
+    <visual>
+      <geometry>
+        <box size="0.08 0.002 0.04"/>
+      </geometry>
+      <material name="silver">
+        <color rgba="0.8 0.8 0.8 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.08 0.002 0.04"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.2"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 -0.025"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0002"/>
+    </inertial>
+  </link>
+
+
+    <link name="blade_link_top1">
+    <visual>
+      <geometry>
+        <box size="0.08 0.002 0.04"/>
+      </geometry>
+      <material name="silver">
+        <color rgba="0.8 0.8 0.8 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.08 0.002 0.04"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.2"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 -0.025"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0002"/>
+    </inertial>
+  </link>
+
+    <link name="blade_link_top2">
+    <visual>
+      <geometry>
+        <box size="0.08 0.002 0.04"/>
+      </geometry>
+      <material name="silver">
+        <color rgba="0.8 0.8 0.8 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.08 0.002 0.04"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.2"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 -0.025"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0002"/>
+    </inertial>
+  </link>
+
+    <link name="blade_link_top3">
+    <visual>
+      <geometry>
+        <box size="0.08 0.002 0.03"/>
+      </geometry>
+      <material name="silver">
+        <color rgba="0.8 0.8 0.8 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.08 0.002 0.03"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.2"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 -0.025"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0002"/>
+    </inertial>
+  </link>
+
+  <!-- Joint connecting the base and blade -->
+  <joint name="joint_base_blade" type="fixed">
+    <parent link="slove_base_link"/>
+    <child link="blade_link"/>
+    <origin rpy="0 0 0" xyz="0.09 0.02 0.0"/>
+  </joint>  
+  <joint name="joint_base_blade_side1" type="fixed">
+    <parent link="slove_base_link"/>
+    <child link="blade_link_side1"/>
+    <origin rpy="3.14 0 0" xyz="0.06 0.02 0.04"/>
+  </joint>
+
+  <joint name="joint_base_blade_side2" type="fixed">
+    <parent link="slove_base_link"/>
+    <child link="blade_link_side2"/>
+    <origin rpy="3.14 0 0" xyz="0.06 0.02 -0.04"/>
+  </joint>
+
+  <joint name="joint_base_blade_bot" type="fixed">
+    <parent link="slove_base_link"/>
+    <child link="blade_link_bot"/>
+    <origin rpy="1.57 1.57 0" xyz="0.06 0.0 0"/>
+  </joint>
+
+
+    <joint name="joint_base_blade_top1" type="fixed">
+    <parent link="slove_base_link"/>
+    <child link="blade_link_top1"/>
+    <origin rpy="0.85 1.57 0" xyz="0.133 0.005 0"/>
+  </joint>
+      <joint name="joint_base_blade_top2" type="fixed">
+    <parent link="slove_base_link"/>
+    <child link="blade_link_top2"/>
+    <origin rpy="1.15 1.57 0" xyz="0.15 -0.015 0"/>
+  </joint>
+      <joint name="joint_base_blade_top3" type="fixed">
+    <parent link="slove_base_link"/>
+    <child link="blade_link_top3"/>
+    <origin rpy="1.57 1.57 0" xyz="0.1575 -0.04 0"/>
+  </joint>
+
+</robot>

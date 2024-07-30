@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<robot name="cup">
+
+
+  <!-- Link representing the blade of the shovel -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="0.1 0.01 0.1"/>
+      </geometry>
+      <material name="silver">
+        <color rgba="0.0 0.8 0.2 0.5"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.1 0.02 0.1"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.2"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 -0.025"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0002"/>
+    </inertial>
+  </link>  <!-- Link representing the blade of the shovel -->
+
+  <link name="blade_link_side1">
+    <visual>
+      <geometry>
+        <box size="0.1 0.005 0.1"/>
+      </geometry>
+      <material name="silver">
+        <color rgba="0.0 0.8 0.2 0.5"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.1 0.005 0.1"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.2"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 -0.025"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0002"/>
+    </inertial>
+  </link>
+
+  <link name="blade_link_side2">
+    <visual>
+      <geometry>
+        <box size="0.1 0.005 0.1"/>
+      </geometry>
+      <material name="silver">
+        <color rgba="0.0 0.8 0.2 0.5"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.1 0.005 0.1"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.2"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 -0.025"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0002"/>
+    </inertial>
+  </link>
+
+  <link name="blade_link_bot">
+    <visual>
+      <geometry>
+        <box size="0.1 0.005 0.1"/>
+      </geometry>
+      <material name="silver">
+        <color rgba="0.0 0.8 0.2 0.5"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.1 0.005 0.1"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.2"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 -0.025"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0002"/>
+    </inertial>
+  </link>
+
+  <link name="blade_link_bot2">
+    <visual>
+      <geometry>
+        <box size="0.1 0.005 0.1"/>
+      </geometry>
+      <material name="silver">
+        <color rgba="0.0 0.8 0.2 0.5"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.1 0.005 0.1"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.2"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 -0.025"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0002"/>
+    </inertial>
+  </link>
+
+
+  <joint name="joint_base_blade_side1" type="fixed">
+    <parent link="base_link"/>
+    <child link="blade_link_side1"/>
+    <origin rpy="1.57 0 0" xyz="0.0 0.05 0.05"/>
+  </joint>
+
+  <joint name="joint_base_blade_side2" type="fixed">
+    <parent link="base_link"/>
+    <child link="blade_link_side2"/>
+    <origin rpy="1.57 0 0" xyz="0.0 0.05 -0.05"/>
+  </joint>
+
+  <joint name="joint_base_blade_bot" type="fixed">
+    <parent link="base_link"/>
+    <child link="blade_link_bot"/>
+    <origin rpy="1.57 1.57 0" xyz="0.05 0.05 0"/>
+  </joint>
+
+  <joint name="joint_base_blade_bot2" type="fixed">
+    <parent link="base_link"/>
+    <child link="blade_link_bot2"/>
+    <origin rpy="1.57 1.57 0" xyz="-0.05 0.05 0"/>
+  </joint>
+
+</robot>

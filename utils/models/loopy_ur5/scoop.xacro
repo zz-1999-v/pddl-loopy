@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<robot name="scoop_robot">
+
+  <!-- Define base link -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://pybullet/meshes/scoop/scoop_s.stl"/>
+      </geometry>
+      <material name="LightGrey">
+        <color rgba="0.7 0.7 0.7 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://pybullet/meshes/scoop/scoop_s.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="4.0"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <inertia ixx="0.00443333156" ixy="0.0" ixz="0.0" iyy="0.00443333156" iyz="0.0" izz="0.0072"/>
+    </inertial>
+  </link>
+
+</robot>

@@ -1,0 +1,129 @@
+<mujoco model="hand_description">
+  <compiler angle="radian" autolimits="true"/>
+  <asset>
+    <mesh name="base_link" file="base_link.STL"/>
+    <mesh name="fi1-1" file="fi1-1.STL"/>
+    <mesh name="fi1-2" file="fi1-2.STL"/>
+    <mesh name="fi1-3" file="fi1-3.STL"/>
+    <mesh name="fi1-4" file="fi1-4.STL"/>
+    <mesh name="fi2-1" file="fi2-1.STL"/>
+    <mesh name="fi2-2" file="fi2-2.STL"/>
+    <mesh name="fi2-3" file="fi2-3.STL"/>
+    <mesh name="fi2-4" file="fi2-4.STL"/>
+    <mesh name="fi3-1" file="fi3-1.STL"/>
+    <mesh name="fi3-2" file="fi3-2.STL"/>
+    <mesh name="fi3-3" file="fi3-3.STL"/>
+    <mesh name="fi3-4" file="fi3-4.STL"/>
+    <mesh name="fi4-1" file="fi4-1.STL"/>
+    <mesh name="fi4-2" file="fi4-2.STL"/>
+    <mesh name="fi4-3" file="fi4-3.STL"/>
+    <mesh name="fi4-4" file="fi4-4.STL"/>
+    <mesh name="fi5-1" file="fi5-1.STL"/>
+    <mesh name="fi5-2" file="fi5-2.STL"/>
+    <mesh name="fi5-3" file="fi5-3.STL"/>
+    <mesh name="fi5-4" file="fi5-4.STL"/>
+  </asset>
+  <worldbody>
+    <geom type="mesh" rgba="0.79216 0.81961 0.93333 1" mesh="base_link"/>
+    <body name="fi1-1" pos="-0.0195 0.025395 0.049809" quat="0.5065 0.493412 0.506504 0.493412">
+      <inertial pos="0 0 -0.006816" quat="0.707107 0 0 0.707107" mass="0.006" diaginertia="3.19e-07 2.93e-07 5.1e-08"/>
+      <joint name="fi1-1joint" pos="0 0 0" axis="0 0 1" range="-1.047 1.047"/>
+      <geom type="mesh" rgba="0.7 0.8 0.9 1" mesh="fi1-1"/>
+      <body name="fi1-2" quat="0.499998 0.5 0.500002 0.5">
+        <inertial pos="0.027565 -0.007648 -7.2e-05" quat="-0.121107 0.688529 0.156143 0.697768" mass="0.043" diaginertia="1.03438e-05 1.00711e-05 2.0651e-06"/>
+        <joint name="fi1-2joint" pos="0 0 0" axis="0 0 1" range="0 2.09"/>
+        <geom type="mesh" rgba="0.65 0.8 0.9 1" mesh="fi1-2"/>
+        <body name="fi1-3" pos="0.048883 -0.018383 0">
+          <inertial pos="0.009068 -0.001624 0.001364" quat="0.587253 0.172426 -0.712002 0.344175" mass="0.015" diaginertia="1.96399e-06 1.33551e-06 6.61498e-07"/>
+          <joint name="fi1-3joint" pos="0 0 0" axis="0 0 1" range="0 1.744"/>
+          <geom type="mesh" rgba="0.6 0.8 0.9 1" mesh="fi1-3"/>
+          <body name="fi1-4" pos="0.0284 -0.0092477 0">
+            <inertial pos="0.006445 -0.003732 -0.000802" quat="-0.431378 0.714785 -0.0733966 0.545535" mass="0.005" diaginertia="4.99324e-07 4.66467e-07 1.49209e-07"/>
+            <joint name="fi1-4joint" pos="0 0 0" axis="0 0 1" range="0 1.744"/>
+            <geom type="mesh" rgba="0.55 0.8 0.9 1" mesh="fi1-4"/>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="fi2-1" pos="-0.0195 0 0.059698" quat="0.499998 0.5 0.500002 0.5">
+      <inertial pos="0 0 -0.006816" quat="0.707107 0 0 0.707107" mass="0.006" diaginertia="3.19e-07 2.93e-07 5.1e-08"/>
+      <joint name="fi2-1joint" pos="0 0 0" axis="0 0 1" range="-1.047 1.047"/>
+      <geom type="mesh" rgba="0.7 0.75 0.9 1" mesh="fi2-1"/>
+      <body name="fi2-2" quat="0.499998 0.5 0.500002 0.5">
+        <inertial pos="0.027818 -0.007854 -7.1e-05" quat="-0.129644 0.688206 0.157911 0.696153" mass="0.044" diaginertia="1.07826e-05 1.04688e-05 2.11562e-06"/>
+        <joint name="fi2-2joint" pos="0 0 0" axis="0 0 1" range="0 2.09"/>
+        <geom type="mesh" rgba="0.7 0.7 0.9 1" mesh="fi2-2"/>
+        <body name="fi2-3" pos="0.048883 -0.018383 0">
+          <inertial pos="0.009361 -0.001614 0.001247" quat="0.374079 0.462633 0.448476 0.667012" mass="0.016" diaginertia="2.36421e-06 1.95779e-06 9.15004e-07"/>
+          <joint name="fi2-3joint" pos="0 0 0" axis="0 0 1" range="0 1.744"/>
+          <geom type="mesh" rgba="0.7 0.65 0.9 1" mesh="fi2-3"/>
+          <body name="fi2-4" pos="0.0284 -0.0092477 0">
+            <inertial pos="0.006445 -0.003732 -0.000802" quat="-0.431378 0.714785 -0.0733966 0.545535" mass="0.005" diaginertia="4.99324e-07 4.66467e-07 1.49209e-07"/>
+            <joint name="fi2-4joint" pos="0 0 0" axis="0 0 1" range="0 1.744"/>
+            <geom type="mesh" rgba="0.7 0.6 0.9 1" mesh="fi2-4"/>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="fi3-1" pos="-0.0185 -0.0198 0.053951" quat="0.499998 0.5 0.500002 0.5">
+      <inertial pos="0 -0.000671 -0.01356" quat="0.999568 0.0294048 0 0" mass="0.008" diaginertia="7.89e-07 7.83297e-07 1.18703e-07"/>
+      <joint name="fi3-1joint" pos="0 0 0" axis="0 0 1" range="-1.047 1.047"/>
+      <geom type="mesh" rgba="0.7 0.8 0.85 1" mesh="fi3-1"/>
+      <body name="fi3-2" quat="0.499998 0.5 0.500002 0.5">
+        <inertial pos="0.025872 0.003016 -0.000107" quat="-0.0299691 0.706508 0.0244841 0.706646" mass="0.013" diaginertia="2.64601e-06 2.52719e-06 4.67805e-07"/>
+        <joint name="fi3-2joint" pos="0 0 0" axis="0 0 1" range="0 1.744"/>
+        <geom type="mesh" rgba="0.7 0.8 0.8 1" mesh="fi3-2"/>
+        <body name="fi3-3" pos="0.044995 0.00066781 0">
+          <inertial pos="0.010272 -0.000925 -9e-08" quat="0.413546 0.497469 0.500293 0.57551" mass="0.007" diaginertia="7.17053e-07 7.14956e-07 2.72991e-07"/>
+          <joint name="fi3-3joint" pos="0 0 0" axis="0 0 1" range="0 1.744"/>
+          <geom type="mesh" rgba="0.7 0.8 0.75 1" mesh="fi3-3"/>
+          <body name="fi3-4" pos="0.024601 -0.0044465 0">
+            <inertial pos="0.008412 -0.002732 -1e-05" quat="-0.132394 0.694602 0.132394 0.694602" mass="0.005" diaginertia="3.38e-07 3.12899e-07 1.14101e-07"/>
+            <joint name="fi3-4joint" pos="0 0 0" axis="0 0 1" range="0 1.744"/>
+            <geom type="mesh" rgba="0.7 0.8 0.7 1" mesh="fi3-4"/>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="fi4-1" pos="-0.0185 -0.036717 0.038536" quat="0.491196 0.50865 0.491199 0.50865">
+      <inertial pos="0 -0.000671 -0.01356" quat="0.999568 0.0294048 0 0" mass="0.008" diaginertia="7.89e-07 7.83297e-07 1.18703e-07"/>
+      <joint name="fi4-1joint" pos="0 0 0" axis="0 0 1" range="-1.047 1.047"/>
+      <geom type="mesh" rgba="0.65 0.75 0.9 1" mesh="fi4-1"/>
+      <body name="fi4-2" quat="0.499998 0.5 0.500002 0.5">
+        <inertial pos="0.021238 0.003537 2e-06" quat="0 0.719366 0 0.694631" mass="0.01" diaginertia="1.45436e-06 1.374e-06 3.38635e-07"/>
+        <joint name="fi4-2joint" pos="0 0 0" axis="0 0 1" range="0 1.7"/>
+        <geom type="mesh" rgba="0.6 0.7 0.9 1" mesh="fi4-2"/>
+        <body name="fi4-3" pos="0.035975 0.001338 0">
+          <inertial pos="0.010255 -0.000855 -8.9e-05" quat="0.420161 0.49541 0.502365 0.570669" mass="0.007" diaginertia="7.29178e-07 7.26963e-07 2.77858e-07"/>
+          <joint name="fi4-3joint" pos="0 0 0" axis="0 0 1" range="0 1.744"/>
+          <geom type="mesh" rgba="0.55 0.65 0.9 1" mesh="fi4-3"/>
+          <body name="fi4-4" pos="0.024621 -0.004339 0">
+            <inertial pos="0.008341 -0.002627 -1e-05" quat="-0.128885 0.695262 0.128885 0.695262" mass="0.005" diaginertia="3.42e-07 3.17108e-07 1.13892e-07"/>
+            <joint name="fi4-4joint" pos="0 0 0" axis="0 0 1" range="0 1.744"/>
+            <geom type="mesh" rgba="0.5 0.6 0.9 1" mesh="fi4-4"/>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="fi5-1" pos="0.0024692 0.006194 -0.060602">
+      <inertial pos="0.004928 0.023413 0.032334" quat="0.907054 0.380467 -0.0869551 0.157913" mass="0.207" diaginertia="0.000113093 0.000104375 2.88601e-05"/>
+      <joint name="fi5-1joint" pos="0 0 0" axis="0 0 -1" range="0 2.09"/>
+      <geom type="mesh" rgba="0.7 0.7 0.8 1" mesh="fi5-1"/>
+      <body name="fi5-2" pos="0.0070384 0.052727 0.06422" quat="0.925416 0.336825 0.163177 0.0593894">
+        <inertial pos="0 -0.000133 -0.00788" quat="0.707104 -0.00209814 0.00209814 0.707104" mass="0.006" diaginertia="3.88012e-07 3.6e-07 5.09881e-08"/>
+        <joint name="fi5-2joint" pos="0 0 0" axis="0 0 1" range="-1.047 1.047"/>
+        <geom type="mesh" rgba="0.7 0.68 0.78 1" mesh="fi5-2"/>
+        <body name="fi5-3" quat="0.499998 0.5 0.500002 0.5">
+          <inertial pos="0.022364 0.004293 -0.000109" quat="0.520126 0.481616 0.517328 0.479465" mass="0.012" diaginertia="1.81826e-06 1.77877e-06 5.9897e-07"/>
+          <joint name="fi5-3joint" pos="0 0 0" axis="0 0 1" range="0 1.744"/>
+          <geom type="mesh" rgba="0.7 0.65 0.75 1" mesh="fi5-3"/>
+          <body name="fi5-4" pos="0.03577 0.0040652 0">
+            <inertial pos="0.010875 -0.001252 -6.7e-05" quat="0.441419 0.43945 0.555042 0.551327" mass="0.009" diaginertia="1.03091e-06 8.10995e-07 4.95099e-07"/>
+            <joint name="fi5-4joint" pos="0 0 0" axis="0 0 1" range="0 1.744"/>
+            <geom type="mesh" rgba="0.7 0.6 0.7 1" mesh="fi5-4"/>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+</mujoco>
