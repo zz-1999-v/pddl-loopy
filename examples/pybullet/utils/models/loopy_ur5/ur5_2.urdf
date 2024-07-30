@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--            <mesh filename="package://demo_urdf/meshes/ur5/visual/base.dae"/>       -->
+<!--            <mesh filename="package://demo_urdf/meshes/ur5/visual/forearm.dae"/>    -->
+<!--            <mesh filename="package://demo_urdf/meshes/ur5/visual/shoulder.dae"/>   -->
+<!--            <mesh filename="package://demo_urdf/meshes/ur5/visual/upperarm.dae"/>   -->
+<!--            <mesh filename="package://demo_urdf/meshes/ur5/visual/wrist1.dae"/>     -->
+<!--            <mesh filename="package://demo_urdf/meshes/ur5/visual/wrist2.dae"/>     -->
+<!--            <mesh filename="package://demo_urdf/meshes/ur5/visual/wrist3.dae"/>     -->
+
+<robot name="ur5">
+
+    <link name="base_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://demo_urdf/meshes/ur5/visual/base.dae"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <link name="shoulder_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://demo_urdf/meshes/ur5/visual/shoulder.dae"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <joint name="joint1" type="revolute">
+        <!-- 0.089159 -->
+        <origin xyz="0 0 0.0862" rpy="0 0 0"></origin>
+        <axis xyz="0 0 1"/>
+        <parent link="base_link" />
+        <child link="shoulder_link"/>
+        <!-- -360 - 360 -->
+        <limit effort="30" velocity="1.0" lower="-6.28" upper="6.28" />
+    </joint>
+
+    <link name="upperarm_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://demo_urdf/meshes/ur5/visual/upperarm.dae"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <joint name="joint2" type="revolute">
+        <!-- 0.089159 -->
+        <origin xyz="0 0.136 0" rpy="0 0 0"></origin>
+        <axis xyz="0 1 0"/>
+        <parent link="shoulder_link" />
+        <child link="upperarm_link"/>
+        <!-- -360 - 360 -->
+        <limit effort="30" velocity="1.0" lower="-6.28" upper="6.28" />
+    </joint>
+
+    <link name="forearm_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://demo_urdf/meshes/ur5/visual/forearm.dae"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <joint name="joint3" type="revolute">
+        <!-- 0.089159 -->
+        <origin xyz="0 -0.12 0.425" rpy="0 0 0"></origin>
+        <axis xyz="0 1 0"/>
+        <parent link="upperarm_link" />
+        <child link="forearm_link"/>
+        <!-- -360 - 360 -->
+        <limit effort="30" velocity="1.0" lower="-6.28" upper="6.28" />
+    </joint>
+
+    <link name="wrist1_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://demo_urdf/meshes/ur5/visual/wrist1.dae"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <joint name="joint4" type="revolute">
+        <!-- 0.089159 -->
+        <origin xyz="0 0 0.3922" rpy="0 0 0"></origin>
+        <axis xyz="0 1 0"/>
+        <parent link="forearm_link" />
+        <child link="wrist1_link"/>
+        <!-- -360 - 360 -->
+        <limit effort="30" velocity="1.0" lower="-6.28" upper="6.28" />
+    </joint>
+
+    <link name="wrist2_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://demo_urdf/meshes/ur5/visual/wrist2.dae"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <joint name="joint5" type="revolute">
+        <!-- 0.089159 -->
+        <origin xyz="0 0.093 -0.0015" rpy="0 0 0"></origin>
+        <axis xyz="0 0 1"/>
+        <parent link="wrist1_link" />
+        <child link="wrist2_link"/>
+        <!-- -360 - 360 -->
+        <limit effort="30" velocity="1.0" lower="-6.28" upper="6.28" />
+    </joint>
+
+    <link name="wrist3_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://demo_urdf/meshes/ur5/visual/wrist3.dae"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <joint name="joint6" type="revolute">
+        <!-- 0.089159 -->
+        <origin xyz="0 0 0.0948" rpy="0 0 0"></origin>
+        <axis xyz="0 1 0"/>
+        <parent link="wrist2_link" />
+        <child link="wrist3_link"/>
+        <!-- -360 - 360 -->
+        <limit effort="30" velocity="1.0" lower="-6.28" upper="6.28" />
+    </joint>
+
+</robot>
