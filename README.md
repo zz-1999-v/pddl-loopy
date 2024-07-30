@@ -1,14 +1,12 @@
-# Citation Project
-**pddlstream** branch ([main](https://github.com/caelan/pddlstream/tree/stable)) 
+### Citation Project
+[pddlstream](https://github.com/caelan/pddlstream/tree/stable)
 
-## Installation
-
-<!--$ git clone --recursive --branch main https://github.com/caelan/pddlstream.git-->
+### Installation
 ```
-$ git clone --recursive --branch main git@github.com:caelan/pddlstream.git
-$ cd pddlstream
-pddlstream$ git submodule update --init --recursive
-pddlstream$ ./downward/build.py
+$ git clone --recursive --branch main git@github.com:zz-1999-v/pddl-loopy.git
+$ cd pddl-loopy
+pddl-loopy$ git submodule update --init --recursive
+pddl-loopy$ ./downward/build.py
 ```
 <!--```
 $ git clone --recursive https://github.com/caelan/pddlstream.git
