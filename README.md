@@ -5,6 +5,7 @@
 ```
 $ git clone --recursive --branch main git@github.com:zz-1999-v/pddl-loopy.git
 $ cd pddl-loopy
+git clone git@github.com:caelan/downward.git
 pddl-loopy$ git submodule update --init --recursive
 pddl-loopy$ ./downward/build.py
 ```
